@@ -1,0 +1,87 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.openweathermap.org/data/2.5/weather?id=524901
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 07 Jan 2015 17:16:52 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Source:
+      - redis
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: |
+        {"coord":{"lon":37.62,"lat":55.75},"sys":{"type":3,"id":150069,"message":0.0232,"country":"RU","sunrise":1420610166,"sunset":1420636537},"weather":[{"id":802,"main":"Clouds","description":"scattered clouds","icon":"03n"}],"base":"cmc stations","main":{"temp":255,"humidity":88,"pressure":1034.321,"temp_min":250.09,"temp_max":257.25},"wind":{"speed":2.2,"gust":4,"deg":292},"clouds":{"all":48},"dt":1420650291,"id":524901,"name":"Moscow","cod":200}
+    http_version: 
+  recorded_at: Wed, 07 Jan 2015 17:16:51 GMT
+- request:
+    method: get
+    uri: http://api.openweathermap.org/data/2.5/weather?APPID=12345&id=524901
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 07 Jan 2015 18:15:07 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Source:
+      - back
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: |
+        {"coord":{"lon":37.62,"lat":55.75},"sys":{"type":3,"id":150069,"message":0.2261,"country":"RU","sunrise":1420610166,"sunset":1420636537},"weather":[{"id":800,"main":"Clear","description":"Sky is Clear","icon":"01n"}],"base":"cmc stations","main":{"temp":254.74,"humidity":88,"pressure":1034.017,"temp_min":249.9,"temp_max":257.25},"wind":{"speed":1.8,"gust":3.6,"deg":292},"clouds":{"all":0},"dt":1420654355,"id":524901,"name":"Moscow","cod":200}
+    http_version: 
+  recorded_at: Wed, 07 Jan 2015 18:15:07 GMT
+recorded_with: VCR 2.9.3
